@@ -1,0 +1,29 @@
+﻿<Window x:Class="Mercurial.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Mercurial"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel Orientation="Vertical" Margin="10">
+            <!-- Панель для отображения данных -->
+            <ListView Name="accountListView" Height="200" Margin="0,0,0,10">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Номер счета" DisplayMemberBinding="{Binding AccountNumber}" Width="120"/>
+                        <GridViewColumn Header="Баланс" DisplayMemberBinding="{Binding Balance}" Width="80"/>
+                        <!-- Добавьте дополнительные столбцы по мере необходимости -->
+                    </GridView>
+                </ListView.View>
+            </ListView>
+
+            <!-- Кнопка для добавления нового счета -->
+            <Button Content="Добавить счет" Click="AddAccount_Click" Width="120"/>
+
+            <!-- Другие элементы управления для ваших операций и функций -->
+            <!-- Например: фильтры, поиск, отчеты, и т.д. -->
+        </StackPanel>
+    </Grid>
+</Window>

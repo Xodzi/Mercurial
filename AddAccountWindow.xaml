@@ -1,0 +1,27 @@
+﻿<Window x:Class="Mercurial.AddAccountWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Mercurial"
+        mc:Ignorable="d"
+        Title="AddAccountWindow" Height="108" Width="277">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Label Content="Номер счета:"/>
+        <TextBox Name="accountNumberTextBox" Grid.Row="0" Margin="5"/>
+
+        <Label Content="Баланс:" Grid.Row="1"/>
+        <TextBox Name="balanceTextBox" Grid.Row="1" Margin="5"/>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Row="2" Margin="0,6,18,4">
+            <Button Content="Добавить" Click="AddButton_Click"/>
+        </StackPanel>
+        <Button Content="Отмена" Click="CancelButton_Click" RenderTransformOrigin="0.098,0.604" Margin="93,6,139,0" Grid.Row="2" Height="20" VerticalAlignment="Top"/>
+    </Grid>
+</Window>

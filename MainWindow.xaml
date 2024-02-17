@@ -7,23 +7,26 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <StackPanel Orientation="Vertical" Margin="10">
-            <!-- Панель для отображения данных -->
-            <ListView Name="accountListView" Height="200" Margin="0,0,0,10">
-                <ListView.View>
-                    <GridView>
-                        <GridViewColumn Header="Номер счета" DisplayMemberBinding="{Binding AccountNumber}" Width="120"/>
-                        <GridViewColumn Header="Баланс" DisplayMemberBinding="{Binding Balance}" Width="80"/>
-                        <!-- Добавьте дополнительные столбцы по мере необходимости -->
-                    </GridView>
-                </ListView.View>
-            </ListView>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <!-- Панель для отображения данных -->
+        <ListView Name="accountListView" Height="200" Margin="0,10,0,0" VerticalAlignment="Top">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Номер счета" DisplayMemberBinding="{Binding AccountNumber}" Width="120"/>
+                    <GridViewColumn Header="Баланс" DisplayMemberBinding="{Binding Balance}" Width="80"/>
+                    <!-- Добавьте дополнительные столбцы по мере необходимости -->
+                </GridView>
+            </ListView.View>
+        </ListView>
 
-            <!-- Кнопка для добавления нового счета -->
-            <Button Content="Добавить счет" Click="AddAccount_Click" Width="120"/>
+        <!-- Кнопка для добавления нового счета -->
+        <Button Content="Добавить счет" Click="AddAccount_Click" Margin="10,0,0,80" Height="20" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="120"/>
+        <Button Content="Составить отчёт" RenderTransformOrigin="0.187,0.729" Margin="10,0,0,45" Click="Button_Click" HorizontalAlignment="Left" Width="120" Height="20" VerticalAlignment="Bottom"/>
+        <Button Content="Работники" HorizontalAlignment="Left" Margin="154,334,0,0" VerticalAlignment="Top" Width="120" Click="Button_Click_1" Height="20"/>
 
-            <!-- Другие элементы управления для ваших операций и функций -->
-            <!-- Например: фильтры, поиск, отчеты, и т.д. -->
-        </StackPanel>
+        <!-- Другие элементы управления для ваших операций и функций -->
     </Grid>
 </Window>

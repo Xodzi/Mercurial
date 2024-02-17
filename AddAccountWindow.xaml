@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Mercurial"
         mc:Ignorable="d"
-        Title="AddAccountWindow" Height="108" Width="277">
+        Title="AddAccountWindow" Height="150" Width="397">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -13,15 +13,15 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <Label Content="Номер счета:"/>
-        <TextBox Name="accountNumberTextBox" Grid.Row="0" Margin="5"/>
+        <Label Content="Номер счета:" HorizontalAlignment="Left" Margin="0,0,0,28" Grid.RowSpan="2" Width="299"/>
+        <TextBox Name="accountNumberTextBox" Grid.Row="0" Margin="98,5,0,5" HorizontalAlignment="Left" Width="289"/>
 
         <Label Content="Баланс:" Grid.Row="1"/>
-        <TextBox Name="balanceTextBox" Grid.Row="1" Margin="5"/>
+        <TextBox Name="balanceTextBox" Grid.Row="1" Margin="98,5,0,5" HorizontalAlignment="Left" Width="289"/>
 
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Row="2" Margin="0,6,18,4">
             <Button Content="Добавить" Click="AddButton_Click"/>
         </StackPanel>
-        <Button Content="Отмена" Click="CancelButton_Click" RenderTransformOrigin="0.098,0.604" Margin="93,6,139,0" Grid.Row="2" Height="20" VerticalAlignment="Top"/>
+        <Button Content="Отмена" Click="CancelButton_Click" RenderTransformOrigin="0.098,0.604" Margin="224,0,0,0" Grid.Row="2" Height="20" VerticalAlignment="Center" HorizontalAlignment="Left" Width="75"/>
     </Grid>
 </Window>

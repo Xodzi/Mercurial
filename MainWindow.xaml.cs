@@ -1,4 +1,5 @@
 ﻿using System.Collections.ObjectModel;
+using System.IO;
 using System.Security.Principal;
 using System.Text;
 using System.Windows;
@@ -44,6 +45,36 @@ namespace Mercurial
                 // Добавляем новый счет в коллекцию
                 accounts.Add(addAccountWindow.NewAccount);
             }
+        }
+        public string GenerateAccountReport()
+        {
+            StringBuilder report = new StringBuilder();
+
+            report.AppendLine("Отчет о счетах");
+            report.AppendLine("---------------------------");
+
+            foreach (var account in accounts)
+            {
+                report.AppendLine($"Номер счета: {account.AccountNumber}");
+                report.AppendLine($"Баланс: {account.Balance:C}");
+                report.AppendLine("---------------------------");
+            }
+
+            return report.ToString();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            string report = GenerateAccountReport();
+
+            // Сохраняем отчет в файл
+            File.WriteAllText("AccountReport", report);
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Employ employ_window = new Employ();
+            employ_window.Show();
         }
     }
     // Account.cs

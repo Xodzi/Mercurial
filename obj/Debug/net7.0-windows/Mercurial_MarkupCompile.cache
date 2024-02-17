@@ -1,5 +1,5 @@
 ﻿Mercurial
-1.0.0.0
+
 
 winexe
 C#
@@ -12,9 +12,9 @@ TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 C:\Users\ivank\source\repos\Mercurial\Mercurial\App.xaml
 3848165543
 
-82101615178
+6-2134658418
 1981911467256
 AddAccountWindow.xaml;Employ.xaml;MainWindow.xaml;
 
-True
+False
 
